@@ -1,129 +1,157 @@
-/* Reset default styles */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Video Background */
-.video-container {
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Video Background */
+  .video-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
-}
-
-.video-container video {
+    z-index: -1; /* ensures video is behind all content */
+  }
+  
+  .video-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Login & Register Box */
-.login-container {
+  }
+  
+  /* Main Container for Forms */
+  .container {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7); /* semi-transparent dark overlay */
+    width: 350px;
+    margin: 80px auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Form Title */
+  .form-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Input Groups */
+  .input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group i {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: none;
+    border-radius: 5px;
     background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    backdrop-filter: blur(5px);
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.login-container h2 {
-    margin-bottom: 15px;
-    color: white;
-}
-
-/* Input Fields */
-.login-container input {
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .input-group input::placeholder {
+    color: #ddd;
+  }
+  
+  /* Button Styling */
+  .btn {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-    outline: none;
-}
-
-.login-container input::placeholder {
-    color: white;
-}
-
-/* Button */
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+    padding: 12px;
     background: #ff5733;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background: #ff2e00;
-}
-
-/* Social Login */
-.social-login {
-    margin-top: 15px;
-}
-
-.social-login p {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.google-btn, .facebook-btn {
-    width: 100%;
-    padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-top: 5px;
-    font-size: 16px;
+    color: #fff;
+    font-size: 1.2rem;
     cursor: pointer;
-}
-
-.google-btn {
-    background: #db4437;
-    color: white;
-}
-
-.facebook-btn {
-    background: #3b5998;
-    color: white;
-}
-
-.google-btn:hover {
-    background: #c1351d;
-}
-
-.facebook-btn:hover {
-    background: #2d4373;
-}
-
-/* Register Link */
-.login-container p {
-    margin-top: 10px;
-    color: white;
-}
-
-.login-container a {
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ff2e00;
+  }
+  
+  /* "Or" Divider */
+  .or {
+    text-align: center;
+    color: #fff;
+    margin: 1rem 0;
+  }
+  
+  /* Social Icons */
+  .icons {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .icons i {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icons i:hover {
     color: #ffcc00;
-    text-decoration: none;
-}
-
-.login-container a:hover {
-    text-decoration: underline;
-}
+  }
+  
+  /* Links for switching forms */
+  .links {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .links button {
+    border: none;
+    background: transparent;
+    color: #ffcc00;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .links button:hover {
+    color: #fff;
+  }
+  
+  /* Message Div */
+  .messageDiv {
+    background: #ff5733;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 90%;
+      padding: 1rem;
+    }
+  }
+  
