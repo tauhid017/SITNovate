@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form Container */
+.container {
+  background: white;
+  width: 420px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Input Fields */
+.input-group {
+  position: relative;
+  margin: 15px 0;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px 12px 12px 35px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Labels */
+label {
+  position: absolute;
+  left: 35px;
+  top: 12px;
+  font-size: 14px;
+  color: #777;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 30px;
+  font-size: 12px;
+  color: #6a11cb;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+/* Recover Password */
+.recover {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.recover a {
+  text-decoration: none;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.recover a:hover {
+  color: #6a11cb;
+  text-decoration: underline;
+}
+
+/* OR Divider */
+.or {
+  font-size: 1rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #444;
+  position: relative;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+}
+
+.or::before {
+  left: 0;
+}
+
+.or::after {
+  right: 0;
+}
+
+/* Social Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+.icons i {
+  font-size: 1.8rem;
+  color: #2575fc;
+  transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+  color: #6a11cb;
+}
+
+/* Sign Up / Sign In Links */
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.links button {
+  background: none;
+  color: #2575fc;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.links button:hover {
+  color: #6a11cb;
+  text-decoration: underline;
+}
+
+/* Messages */
+.messageDiv {
+  background: #6a11cb;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

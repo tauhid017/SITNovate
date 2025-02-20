@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+  background-size: 400% 400%;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  animation: gradientShift 10s infinite ease-in-out;
+}
+
+/* Background Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.about {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.about:hover {
+  color: #00adb5;
+}
+
+/* Container */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pink-text {
+  color: rgba(255, 1, 153, 0.8); /* Pink color */
+  font-weight: bold;
+}
+
+#quote {
+  font-size: 1.5rem;
+  font-weight: 300;
+  min-height: 40px;
+  opacity: 0;
+  animation: fadeInOut 6s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Explore Button */
+.explore {
+  margin-top: 200px;
+  margin-left: 45px;
+  background-color: #00adb5;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  animation: buttonGlow 2s infinite alternate;
+  text-decoration: none;
+}
+.explore:visited,
+.explore:hover,
+.explore:active {
+  text-decoration: none;
+  color: #fff;
+}
+.explore:hover {
+  background-color: #00fff5;
+  transform: scale(1.1);
+  color:white;
+  text-decoration: none;
+}
+
+@keyframes buttonGlow {
+  0% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.9); }
+}
+
+/* Laser Lights */
+.laser-lights {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.laser {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(128, 0, 128, 0), rgba(128, 0, 128, 0.8), rgba(128, 0, 128, 0));
+  animation: laserMove 5s infinite linear;
+}
+
+.laser:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.laser:nth-child(2) {
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.laser:nth-child(3) {
+  left: 80%;
+  animation-delay: 2s;
+}
+
+@keyframes laserMove {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Floating Word Effect */
+.floating-word {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00fff5;
+  text-shadow: 0 0 10px #00fff5;
+  opacity: 1;
+  animation: zoopUp 1.2s ease-out forwards;
+}
+
+@keyframes zoopUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+}
+
+/* Laser Trail Effect */
+.laser-trail {
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background: rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  transform-origin: center;
+  animation: laserFade 1.5s ease-out forwards;
+}
+
+@keyframes laserFade {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(3);
+  }
+}
